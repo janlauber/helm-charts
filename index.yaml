@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  autokueng:
+  - apiVersion: v2
+    appVersion: v0.1.0-beta
+    created: "2022-04-21T20:43:07.024463785Z"
+    description: A Helm chart for Kubernetes
+    digest: 267754621d6bae2091263f100b016e40202fcf38e8e74f19fec949d48a37abe6
+    name: autokueng
+    type: application
+    urls:
+    - https://github.com/janlauber/helm-charts/releases/download/autokueng-0.1.0/autokueng-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-04-21T20:43:06.766757417Z"
