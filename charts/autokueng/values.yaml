@@ -2,11 +2,17 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+imagePullSecrets: []
+
 frontend:
   replicaCount: 1
+  nodeSelector: {}
+  affinity: {}
+  tolerations: []
   image:
     repository: ghcr.io/janlauber/autokueng-frontend
     tag: v0.1.0-beta
+    pullPolicy: IfNotPresent
   ports:
     - "3000:3000"
   env:
@@ -25,6 +31,7 @@ frontend:
   # requests:
   #   cpu: 100m
   #   memory: 128Mi
+  env: []
   service:
     type: ClusterIP
     port: 3000
@@ -45,9 +52,16 @@ frontend:
 
 api:
   replicaCount: 1
+  nodeSelector: {}
+  affinity: {}
+  tolerations: []
+  db:
+    host: ~ # Database Host url
+    port: ~ # Database Port
   image:
     repository: ghcr.io/janlauber/autokueng-api
     tag: v0.1.0-beta
+    pullPolicy: IfNotPresent
   ports:
     - "8000:8000"
   env:
@@ -85,9 +99,13 @@ api:
 
 data:
   replicaCount: 1
+  nodeSelector: {}
+  affinity: {}
+  tolerations: []
   image:
     repository: ghcr.io/janlauber/autokueng-data
     tag: v0.1.0-beta
+    pullPolicy: IfNotPresent
   ports:
     - "9000:9000"
   env:
@@ -171,10 +189,3 @@ securityContext: {}
   # readOnlyRootFilesystem: true
   # runAsNonRoot: true
   # runAsUser: 1000
-
-
-nodeSelector: {}
-
-tolerations: []
-
-affinity: {}
