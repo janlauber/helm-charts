@@ -1,2 +1,3 @@
-templates/testvalues.yaml
+testvalues.yaml
 .env
+.DS_Store
