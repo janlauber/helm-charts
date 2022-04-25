@@ -2,7 +2,6 @@ remote: origin
 chart-dirs:
   - charts
 chart-repos:
-  - https://charts.bitnami.com/bitnami
   - janlauber=https://janlauber.github.io/helm-charts
 validate-chart-schema: true
 validate-maintainers: true
