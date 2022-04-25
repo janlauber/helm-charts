@@ -25,4 +25,18 @@ entries:
     urls:
     - https://github.com/janlauber/helm-charts/releases/download/autokueng-v0.1.0-beta/autokueng-v0.1.0-beta.tgz
     version: v0.1.0-beta
+  - apiVersion: v2
+    appVersion: v0.1.0-beta
+    created: "2022-04-25T20:01:48.990349249Z"
+    dependencies:
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.1.23
+    description: A Helm chart for https://autokueng.ch
+    digest: 7cbcd82b7f1bac8aaf6013ee3940a9f650f522cf354f4a779e8ec871da7c3371
+    name: autokueng
+    type: application
+    urls:
+    - https://github.com/janlauber/helm-charts/releases/download/autokueng-v0.1.0-beta/autokueng-v0.1.0-beta.tgz
+    version: v0.1.0-beta
 generated: "2022-04-21T20:43:06.766757417Z"
