@@ -2,3 +2,4 @@ testvalues.yaml
 .env
 .DS_Store
 test.yaml
+secret.yaml
