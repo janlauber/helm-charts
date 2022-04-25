@@ -10,8 +10,8 @@ frontend:
   affinity: {}
   tolerations: []
   image:
-    repository: ghcr.io/janlauber/autokueng-frontend
-    tag: v0.1.0-beta
+    repository: ghcr.io/janlauber/autokueng-frontend-test
+    tag: v0.1.2
     pullPolicy: IfNotPresent
   ports:
     - "3000:3000"
@@ -104,7 +104,7 @@ data:
   tolerations: []
   image:
     repository: ghcr.io/janlauber/autokueng-data
-    tag: v0.1.0-beta
+    tag: v0.1.1
     pullPolicy: IfNotPresent
   ports:
     - "9000:9000"
@@ -127,6 +127,8 @@ data:
   service:
     type: ClusterIP
     port: 9000
+  storageClassName: standard
+  storage: 1Gi
   ingress:
     enabled: false
     className: ""
